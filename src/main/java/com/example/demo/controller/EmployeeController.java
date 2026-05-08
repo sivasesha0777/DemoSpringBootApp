@@ -24,6 +24,11 @@ class EmployeeController {
         return employeeService.findAllEmployees();
     }
 
+    @GetMapping
+    public Employee getEmployeeById(Long id) {
+        return employeeService.employeeById(id);
+    }
+
     @DeleteMapping("/delete/{id}")
     public void deleteEmployee(@RequestParam Long id) {
         employeeService.deleteEmployeeById(id);
