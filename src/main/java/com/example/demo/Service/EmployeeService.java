@@ -13,7 +13,7 @@ import java.util.Optional;
 public class EmployeeService {
 
 
-   private EmployeeRepo employeeRepo;
+ EmployeeRepo employeeRepo;
 
     public void createEmployee(Employee employee) {
         employeeRepo.save(employee);
@@ -21,8 +21,8 @@ public class EmployeeService {
     }
 
     public List<Employee> findAllEmployees() {
-       List<Employee> employees = employeeRepo.findAll();
-       return employees;
+       List<Employee> listEmp = employeeRepo.findAll();
+       return listEmp;
     }
 
     public void  deleteEmployeeById(Long id){
