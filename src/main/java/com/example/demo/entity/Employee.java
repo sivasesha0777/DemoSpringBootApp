@@ -13,7 +13,6 @@ public class Employee {
     @Id
     private Long id;
 
-
     private String name;
     private Double salary;
 }

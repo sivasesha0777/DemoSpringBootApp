@@ -3,7 +3,6 @@ package com.example.demo.Service;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.repo.EmployeeRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.Optional;
 @Service
 public class EmployeeService {
 
-   @Autowired
+
    private EmployeeRepo employeeRepo;
 
     public void createEmployee(Employee employee) {
@@ -22,8 +21,8 @@ public class EmployeeService {
     }
 
     public List<Employee> findAllEmployees() {
-        List<Employee> list=employeeRepo.findAll();
-        return list;
+       List<Employee> employees = employeeRepo.findAll();
+       return employees;
     }
 
     public void  deleteEmployeeById(Long id){
